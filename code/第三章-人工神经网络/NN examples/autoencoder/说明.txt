@@ -1,0 +1,5 @@
+1.test_for_dnn:主文件，包括dnn网络的创建(与nn的创建方法一样，这里直接调用了NN文件夹里的nn_create)、训练、测试(调用了NN文件夹中的nn_test)
+2.dnn_train:训练dnn网络，包括
+（1）前N-1层按照稀疏编码器的方式训练（调用了SAE文件夹中的sae_train）
+（2）第N层按照有标签的神经网络训练（调用了NN文件夹中的nn_train）
+3.dnn_adjust:对已经分层训练好了的dnn进行整体训练（调用了NN文件夹中的nn_train）
